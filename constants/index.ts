@@ -1,2 +1,2 @@
-export const appName = 'Vitesse for Nuxt 3'
-export const appDescription = 'Vitesse for Nuxt 3'
+export const appName = 'Email address and Web domain Validator App'
+export const appDescription = 'Check if an email address or web domain exist or not'

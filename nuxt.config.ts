@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
   ],
 
+  runtimeConfig: {
+    API_BASE_URI: process.env.NUXT_APP_API_BASE_URI,
+    API_KEY: process.env.NUXT_APP_API_KEY,
+    API_HOST: process.env.NUXT_APP_API_HOST,
+  },
+
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
     // but missing on offline, disabling extraction it until fixed
@@ -36,7 +42,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/hi'],
     },
   },
 
@@ -57,8 +62,4 @@ export default defineNuxtConfig({
   },
 
   pwa,
-
-  devtools: {
-    enabled: true,
-  },
 })
